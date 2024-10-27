@@ -28,3 +28,12 @@ Exercise 2
 
    #3. Example
    print(category_dfs['comp.graphics'].head())
+
+Exercise 5
+   ```python
+   entry_types = NA_df.map(type)
+   print(entry_types)
+
+   # The 3rd row is supposed to be TRUE while the 5th row should be FALSE
+   # That is because the empty string ('') interprets the entries as string and NoneType respectively.
+   # In Pandas, only entries of type float containing np.nan and NoneType (i.e., None) are interpreted as missing values.
