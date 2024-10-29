@@ -37,22 +37,26 @@ Exercise 5
    # The 3rd row is supposed to be TRUE while the 5th row should be FALSE
    # That is because the empty string ('') interprets the entries as string and NoneType respectively.
    # In Pandas, only entries of type float containing np.nan and NoneType (i.e., None) are interpreted as missing values.
+```
 
 Exercise 8
+1. **Combine the counts into a dataframe for comparison**:
    ```python
-   #Combine the counts into a dataframe for comparison
    category_comparison = pd.DataFrame({'X':X.category_name.value_counts(), 'X_sample': X_sample.category_name.value_counts()}).fillna(0)
    category_comparison = category_comparison.sort_values(by='X', ascending=False)
 
-   #Plotting
+2. **Plotting**:
+   ```python
    fig, ax = plt.subplots(figsize=(7, 5))
    bar_width = 0.2
 
-   #Create bars for X and X_sample
+3. **Create bars for X and X_sample**:
+   ```python
    plt.bar(x, category_comparison['X'], width=bar_width, label='category_name')
    plt.bar([pos + bar_width for pos in x], category_comparison['X_sample'], width=bar_width, label='category_name')
 
-   #Labels, title, and legend
+4. **Labels, title, and legend**:
+   ```python
    plt.xlabel('Category')
    plt.title('Category distribution')
    plt.xticks([pos + bar_width / 2 for pos in x], category_comparison.index)
