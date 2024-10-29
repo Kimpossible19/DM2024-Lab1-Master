@@ -48,6 +48,7 @@ Exercise 8
 2. **Plotting**:
    ```python
    fig, ax = plt.subplots(figsize=(7, 5))
+   x = range(len(category_comparison))
    bar_width = 0.2
 
 3. **Create bars for X and X_sample**:
